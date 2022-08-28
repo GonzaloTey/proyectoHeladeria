@@ -8,6 +8,7 @@
     --font-cursiva: 'Dancing Script';
     --gris600: #2f2e2e;
     --gris200: #706d6d;
+    --yellow: #f9db79;
     --yellow-transparent: rgba(249, 213, 121, .745);
 }
 
@@ -52,6 +53,35 @@ h3 {
 }
 
 
+/** Estilos botones generales  */
+
+
+.btn {
+    width: 130px;
+    height: 42px;
+    background: transparent;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn.light {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn.dark {
+    color: var(--gris600);
+    border: 2px solid var(--gris600);
+}
+
+.btn:hover {
+    background: var(--gris600);
+    border: 2px solid var(--gris600);
+    color: #fff;
+}
+
 /** Grid Layaut general */
 
 
@@ -81,6 +111,49 @@ section {
     height: 100vh;
 }
 
+
+/** Text content */
+
+
+.text-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+/*?  Full */
+
+
+.text-content.full {
+    grid-column: span 12;
+}
+
+.text-content.full h1,
+.text-content.full h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-content.full h1 {
+    font-size: 115px;
+    letter-spacing: 20px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-content.full h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 0.1;
+}
 
 /* +++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++ */
@@ -145,5 +218,46 @@ nav .sociales a {
 nav .sociales a:hover {
     background: transparent;
     transform: scale(1.2);
+    color: #000;
+}
+
+
+/** HEADER */
+
+
+header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh + 50px);
+    background: var(--yellow);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/image1.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .grid {
+    justify-items: center;
+    align-items: center;
+}
+
+header .text-content {
+    padding: 200px 0 0 0;
+}
+
+header .text-content h3 {
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+    font-size: 50px;
+    font-weight: 700;
     color: #000;
 }

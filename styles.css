@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: black;
+    background: var(--yellow);
     border-radius: 5px;
 }
 
@@ -111,8 +111,15 @@ section {
     height: 100vh;
 }
 
+/** Contenedor Background */
 
-/** Text content */
+.background {
+    background-size: cover !important;
+    background-position: right !important;
+}
+
+
+/** TEXT CONTENT */
 
 
 .text-content {
@@ -153,6 +160,34 @@ section {
     letter-spacing: 2px;
     font-weight: 100;
     line-height: 0.1;
+}
+
+
+/*? Lateral  */
+
+.text-content.lateral {
+    padding: 0 50px;
+}
+
+.text-content.lateral h1 {
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: center;
+}
+
+.text-content.lateral h3 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-content.lateral p {
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 /* +++++++++++++++++++++++++++++++++++ */
@@ -261,3 +296,12 @@ header .text-content h3 {
     font-weight: 700;
     color: #000;
 }
+
+
+/** SECTION SABORES  */
+
+
+.sabores div.background {
+    background: url(/img/image2.webp);
+}
+
